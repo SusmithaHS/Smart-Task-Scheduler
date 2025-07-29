@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="ui.MainUIController"
+            prefWidth="600" prefHeight="500">
+    <VBox spacing="10" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+        <Label text="Add New Task"/>
+        <TextField fx:id="titleField" promptText="Task Title"/>
+        <ComboBox fx:id="priorityBox" promptText="Priority (1=High, 2=Medium, 3=Low)"/>
+        <TextField fx:id="deadlineField" promptText="YYYY-MM-DD"/>
+
+        <HBox spacing="10">
+            <Button text="Add Task" onAction="#handleAddTask"/>
+            <Button text="Delete Task" onAction="#handleDeleteTask"/>
+            <Button text="Save Tasks" onAction="#handleSaveTasks"/>
+            <Button text="Load Tasks" onAction="#handleLoadTasks"/>
+
+        </HBox>
+
+        <ListView fx:id="taskListView" prefHeight="200"/>
+    </VBox>
+</AnchorPane>
